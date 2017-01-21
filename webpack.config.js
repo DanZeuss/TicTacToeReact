@@ -10,13 +10,22 @@ module.exports = {
         port: 3333
     },
     module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-                presets: ['es2015', 'react']
+        loaders: 
+        [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel',
+                query: {
+                    presets: ['es2015', 'react']
+                }
+
+            },
+            {
+                test: /\.css?$/,
+                loader: 'style-loader!css-loader'
             }
-        }]
+
+        ]
     }
 }
